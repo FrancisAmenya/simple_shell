@@ -62,13 +62,13 @@ int main(int my_argc, char **my_argv)
 		if (strcmp(char_line_printer, "env") == 0)
 		{
 			/** execmd(char_lineptr); */
-			printf("Not yet implemented, Exiting Shell..\n");
+		  /**	printf("Not yet implemented, Exiting Shell..\n"); */
 		}
 
 		char_line_printer_cp = malloc(sizeof(char) * ss_ccharacters);
 		if (char_line_printer_cp == NULL)
 		{
-			perror("tsh: memory allocation error");
+		/** perror("tsh: memory allocation error"); */
 
 			free_me(char_line_printer);
 			free_me(char_line_printer_cp);
@@ -119,9 +119,9 @@ int main(int my_argc, char **my_argv)
 		/** if (char_lineptr != NULL) */
 		/** free_me(char_lineptr); */
 
-		printf("_________________2nd last:@ Main While\n");
+		/** printf("_________________2nd last:@ Main While\n"); */
 	}
 
-	printf("_________________last:@Main\n");
+	/** printf("_________________last:@Main\n"); */
 	return (0);
 }

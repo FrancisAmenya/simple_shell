@@ -27,7 +27,7 @@ char *find_cmd(char *in_command)
 
 	if (c_file_path == NULL)
 	{
-	printf("find_cmd: file search error");
+	/** printf("find_cmd: file search error"); */
 	free_me(c_path_copy);
 	return (NULL);
 	}
@@ -39,13 +39,13 @@ char *find_cmd(char *in_command)
 
 	if (stat(c_file_path, &s_buffer) == 0)
 	{
-	printf("find_cmd: file search success");
+	/** printf("find_cmd: file search success"); */
 		free_me(c_path_copy);
 		return (c_file_path);
 	}
 	else
 	{
-	printf("find_cmd: file search halt");
+	/** printf("find_cmd: file search halt"); */
 		free_me(c_file_path);
 		c_path_token = strtok(NULL, ":");
 	}
@@ -53,13 +53,13 @@ char *find_cmd(char *in_command)
 
 	if (c_path_copy != NULL)
 	{
-		printf("find_cmd: c_path_copy is NULL");
+	/** printf("find_cmd: c_path_copy is NULL"); */
 		free(c_path_copy);
 	}
 
 	if (c_file_path != NULL)
 	{
-		printf("find_cmd: c_file_path is NULL");
+	/**	printf("find_cmd: c_file_path is NULL"); */
 		free_me(c_file_path);
 	}
 
@@ -67,7 +67,7 @@ char *find_cmd(char *in_command)
 
 	if (stat(in_command, &s_buffer) == 0)
 	{
-		printf("find_cmd: returning cmd");
+	/**	printf("find_cmd: returning cmd"); */
 		return (strdup(in_command));
 	}
 

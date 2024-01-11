@@ -22,7 +22,7 @@ int executor(char *my_args[])
 	if (zs_pid == -1)
 	{
 		perror("shell: fork fatal error");
-		printf("executor error: zpi is -1..\n");
+		/** printf("executor error: zpi is -1..\n"); */
 		z_int_status = -1;
 		return (z_int_status);
 	}
@@ -36,7 +36,7 @@ int executor(char *my_args[])
 	if (execve(my_args[0], my_args, envp) == -1)
 	{
 		perror("shell process doesn't exist");
-		printf("executor error: zpid is 0 && execve is -1..\n");
+		/** printf("executor error: zpid is 0 && execve is -1..\n"); */
 		z_int_status = 1;
 		/**		exit(EXIT_FAILURE); */
 		return (z_int_status);
@@ -47,7 +47,7 @@ int executor(char *my_args[])
 	else if (zs_pid < 0)
 	{
 		perror("shell: fork env incorrect process group");
-		printf("executor error: zpid is 0..\n");
+		/** printf("executor error: zpid is 0..\n"); */
 		z_int_status = -1;
 	}
 
@@ -56,7 +56,7 @@ int executor(char *my_args[])
 	{
 
 	do {
-		printf("executor error: zwpid do..while \n");
+	/** printf("executor error: zwpid do..while \n"); */
 		zchild_pid = waitpid(zs_pid, &z_int_status, WUNTRACED);
 	} while (!WIFEXITED(z_int_status) && !WIFSIGNALED(z_int_status));
 	}
