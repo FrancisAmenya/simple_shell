@@ -110,9 +110,9 @@ int main(int my_argc, char **my_argv)
 			free_me(my_argv[i]);
 		}
 
-			free_me(char_line_printer);
-			free_me(chars_token);
-			free_me(char_line_printer_cp);
+		/**	free_me(char_line_printer); */
+		/**	free_me(chars_token); */
+		/**	free_me(char_line_printer_cp); */
 		/** if (char_lineptr_cp != NULL) */
 		/** free_me(char_lineptr_cp); */
 
