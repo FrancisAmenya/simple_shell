@@ -36,9 +36,6 @@ int main(int my_argc, char **my_argv)
 			free_me(char_line_printer);
 			char_user_prompt = NULL;
 			char_delims = NULL;
-			(void)&ss_ccount;
-			(void)&num_of_tokens;
-			(void)&i;
 			return (0);
 		}
 
